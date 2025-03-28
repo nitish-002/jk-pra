@@ -24,7 +24,7 @@ pipeline{
         steps{
             script{
                 def output= sh(script:'java -jar target/simple-java-project-1.0-SNAPSHOT.jar')
-                echo "Output ${optput}"
+                echo "Output ${output}"
             }
         }
         }
