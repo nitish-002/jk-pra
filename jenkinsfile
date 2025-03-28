@@ -20,5 +20,12 @@ pipeline{
             sh 'mvn test'
             }
         }
+        stage('Run Jar')
+        steps{
+            script{
+                def output= sh(script:'java -jar /var/lib/jenkins/workspace/CICD newpractice/target/simple-java-project-1.0-SNAPSHOT.jar')
+                echo "Output ${optput}"
+            }
+        }
     }
 }
